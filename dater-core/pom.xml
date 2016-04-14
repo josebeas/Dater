@@ -19,7 +19,7 @@
         <tomcat.dbcp.version>7.0.52</tomcat.dbcp.version>
         <javax.persistence>2.1.0</javax.persistence>
         <persistence.api.version>1.0.0.Final</persistence.api.version>
-
+        <commons.lang3.version>3.3.2</commons.lang3.version>
     </properties>
 
     <dependencies>
@@ -135,6 +135,16 @@
             <artifactId>hibernate-jpa-2.1-api</artifactId>
             <version>${persistence.api.version}</version>
         </dependency>
+        <!-- Apache and Server Utils dependencies -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+
+
     </dependencies>
 
 
