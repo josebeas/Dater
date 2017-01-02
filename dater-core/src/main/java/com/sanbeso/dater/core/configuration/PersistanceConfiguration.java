@@ -31,7 +31,7 @@ public class PersistanceConfiguration {
     @Bean
     public LocalSessionFactoryBean sessionFactory() {
         System.out.println("Starting session factory ...");
-        String password = "diaman2015appdatabasecryptosecure%.";
+        String password = "appdatabasecryptosecure%.";
         StandardPBEStringEncryptor strongEncryptor = new StandardPBEStringEncryptor();
         strongEncryptor.setPassword(password);
         HibernatePBEEncryptorRegistry registry = HibernatePBEEncryptorRegistry.getInstance();
@@ -39,7 +39,7 @@ public class PersistanceConfiguration {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 
         sessionFactory.setDataSource(restDataSource());
-        sessionFactory.setPackagesToScan(new String[]{"com.diaman.lc"});
+        sessionFactory.setPackagesToScan(new String[]{"com.sanbeso.dater.core"});
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;
